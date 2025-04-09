@@ -1,0 +1,242 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
+/* color scheme / variables */
+:root {
+    --font-standard: "Nunito", sans-serif;
+    --font-logo: "Comfortaa", sans-serif;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+    --font-extrabold: 800;
+    --font-black: 900;
+    --color-header: #1A1926;
+    --color-white: #F1F3F7;
+    --color-light: #637085;
+    --color-dark: #28263B;
+    --grey-100: #F5F7FA;
+    --grey-200: #F0F1F5;
+    --grey-300: #E8EAED;
+    --grey-400: #E3E5E8;
+    --border-100: #EBEEF2;
+    --border-200: #E3E5E8;
+    --border-300: #C6C8CC;
+    --color-bg: #F1F3F7;
+    --color-accent: #2D99FF;
+    --color-orange: #FF9640;
+    --color-red: #FF6640;
+    --color-yellow: #FFD422;
+    --color-blue-1: #2CD9D9;
+    --color-green: #31D482;
+    --color-purple: #826AF9;
+    --color-dark-green: #24B26B;
+    --color-dark-orange: #F09330;
+    --color-dark-yellow: #FCBB42;
+    --color-dark-red: #E94D3F;
+    --color-dark-blue: #2D7DCC;
+    --color-dark-purple: #634CD4;
+    --color-dark-accent: #2682D9;
+    --main-gradient: linear-gradient( 0deg, rgba(48,124,244,1) 0%, rgba(134,58,246,1) 30%, rgba(188,55,226,1) 64%, rgba(239,97,92,1) 100% ) --background: var(--color-white);
+    --color-text: var(--color-dark);
+    --color-border: var(--grey-400);
+    --color-background: var(--grey-400);
+    --color-surface: var(--color-white);
+    --color-border: var(--border-300);
+    --navlink-text-color: var(--color-accent);
+    --navlink-bg-color: rgba(45, 153, 255, 0.1);
+    --btn-blue-text-color: var(--color-white);
+    --btn-blue-bg-color: var(--color-accent);
+    --btn-grey-text-color: var(--color-header);
+    --btn-grey-bg-color: var(--grey-100);
+}
+
+/* base (tex body) */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    font-size: 16px;
+    font-family: var(--font-standard);
+    font-weight: var(--font-regular);
+    font-style: normal;
+    color: var(--color-text);
+    background-color: var(--color-background);
+}
+
+/* structure */
+.center-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.surface {
+    border-radius: 16px;
+    background-color: var(--color-surface);
+    box-shadow: 0 6px 8px 2px rgba(0, 0, 0, 0.1);
+}
+
+.portal {
+    display: grid;
+    grid-template-columns: minmax(50px, 270px) 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "logo top" "side main";
+    height: 100dvh;
+}
+
+    .portal > .logotype {
+        grid-area: logo;
+        border-right: 1px solid var(--color-border);
+        padding: 1rem 2rem;
+    }
+
+    .portal > .side {
+        grid-area: side;
+        border-right: 1px solid var(--color-border);
+        padding: 1rem;
+    }
+
+    .portal > .top {
+        grid-area: top;
+        border-bottom: 1px solid var(--color-border);
+        padding: 1rem 2rem;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 5rem;
+        align-items: center;
+    }
+
+    .portal > .main {
+        grid-area: main;
+        padding: 2rem;
+    }
+
+.temp {
+    height: 600px;
+    width: 450px;
+}
+
+/* typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-standard);
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: var(--font-bold);
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: var(--font-bold);
+}
+
+h3 {
+    font-size: 28px;
+    font-weight: var(--font-bold);
+}
+
+h4 {
+    font-size: 24px;
+    font-weight: var(--font-semibold);
+}
+
+h5 {
+    font-size: 20px;
+    font-weight: var(--font-semibold);
+}
+
+h6 {
+    font-size: 18px;
+    font-weight: var(--font-semibold);
+}
+
+/* links */
+.nav-link {
+    font-family: var(--font-standard);
+    font-weight: var(--font-semibold);
+    font-size: 15px;
+}
+
+.tab-link {
+    font-family: var(--font-standard);
+    font-weight: var(--font-bold);
+    font-size: 15px;
+}
+
+/* buttons */
+.btn {
+    border-radius: 14px;
+    font-size: 1em;
+    font-weight: var(--font-semibold);
+    font-family: var(--font-standard);
+    padding: .7rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.btn-blue {
+    color: var(--btn-blue-text-color);
+    background-color: var(--btn-blue-bg-color);
+}
+
+.btn-grey {
+    color: var(--btn-grey-text-color);
+    background-color: var(--btn-grey-bg-color);
+}
+
+/* list */
+
+/* components */
+.alpha-logotype {
+    font-size: 26px;
+    font-weight: var(--font-bold);
+    font-family: var(--font-logo);
+    text-decoration: none;
+    color: var(--color-text);
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.nav-links {
+    margin: 1.5rem 0;
+}
+
+    .nav-links > .nav-link {
+        font-size: 16px;
+        font-family: var(--font-standard);
+        font-weight: var(--font-semibold);
+        text-decoration: none;
+        color: var(--navlink-text-color);
+        background-color: var(--navlink-bg-color);
+        border-radius: 1rem;
+        padding: 1rem 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 1.1rem;
+    }
+
+        .nav-links > .nav-link:hover {
+        }
+
+/* sections */
+
+/* views/pages */
